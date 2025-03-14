@@ -36,7 +36,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * @param registry
      */
     protected void addInterceptors(InterceptorRegistry registry) {
-        log.info("开始注册自定义拦截器...");
+        log.info("Registering custom interceptor...");
         registry.addInterceptor(jwtTokenAdminInterceptor)
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/employee/login");
@@ -76,7 +76,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * @param converters
      */
     protected void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-        log.info("扩展消息展示器...");
+        log.info("Extending Message Converters...");
         // 创建一个消息转换器对象
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
         // 需要为消息转换器设置一个对象转换器（用于json格式序列化与反序列化）
