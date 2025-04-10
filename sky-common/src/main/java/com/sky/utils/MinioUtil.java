@@ -43,8 +43,9 @@ public class MinioUtil {
                 throw new RuntimeException(e);
             }
         }
-        //文件访问路径规则 https://BucketName.Endpoint/ObjectName
-        String filePath = endpoint +"/browser/"+ bucketName +"/" + objectName;
+
+        // For Minio, use http://<minio-server>:9000/<bucket-name>/<image-path>
+        String filePath = endpoint +"/"+ bucketName +"/" + objectName;
 
         log.info("File Uploaded to: {}", filePath);
         return filePath;

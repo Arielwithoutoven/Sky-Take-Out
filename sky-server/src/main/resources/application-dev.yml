@@ -7,7 +7,7 @@ sky:
     username: root
     password: 12345678
   minio:
-    endpoint: http://127.0.0.1:9001
+    endpoint: http://127.0.0.1:9000  # 9000 for API, 9001 for browser
     bucketName: sky-image
     accessKey: lg3tda2hqqL2nftmn9CR
     secretKey: 5JC8VPn8OMOwqkQG2ubC4GLFFQlvFK8HLlSKjSqX
