@@ -22,6 +22,8 @@ mybatis:
     map-underscore-to-camel-case: true
 
 logging:
+  charset:
+    console: UTF-8
   level:
     com:
       sky:
