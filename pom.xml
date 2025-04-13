@@ -24,13 +24,13 @@
         <commons.lang>2.6</commons.lang>
         <druid>1.2.1</druid>
         <pagehelper>1.3.0</pagehelper>
-        <aliyun.sdk.oss>3.10.2</aliyun.sdk.oss>
         <knife4j>3.0.3</knife4j>
         <aspectj>1.9.4</aspectj>
         <jjwt>0.9.1</jjwt>
         <jaxb-api>2.3.1</jaxb-api>
         <poi>3.16</poi>
         <minio>8.5.17</minio>
+        <spring-boot-starter-data-redis>2.7.3</spring-boot-starter-data-redis>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -101,17 +101,16 @@
             </dependency>
 
             <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun.sdk.oss}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>
                 <version>${jaxb-api}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-starter-data-redis}</version>
+            </dependency>
             <!-- poi -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
