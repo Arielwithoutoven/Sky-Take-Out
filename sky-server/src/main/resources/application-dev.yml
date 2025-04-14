@@ -7,12 +7,12 @@ sky:
     username: root
     password: 12345678
   minio:
-    endpoint: localhost:9000  # 9000 for API, 9001 for browser
+    endpoint: http://localhost:9000  # 9000 for API, 9001 for browser
     bucketName: sky-image
     accessKey: lg3tda2hqqL2nftmn9CR
     secretKey: 5JC8VPn8OMOwqkQG2ubC4GLFFQlvFK8HLlSKjSqX
   redis:
-   host: 127.0.0.1
+   host: localhost
    port: 6379
    password: 1
 #   database: 0  # DB0，redis 默认会有 16 个互相隔离的数据库

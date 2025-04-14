@@ -47,6 +47,14 @@ public interface DishMapper {
     Dish getById(Long id);
 
     /**
+     * 根据套餐id查询菜品
+     * @param setmealId
+     * @return
+     */
+    @Select("select a.* from dish a left join setmeal_dish b on a.id = b.dish_id where b.setmeal_id = #{setmealId}")
+    List<Dish> getBySetmealId(Long setmealId);
+
+    /**
      * 删除菜品
      * @param id
      * @return
@@ -57,15 +65,20 @@ public interface DishMapper {
     /**
      * 批量删除菜品
      * @param ids
-     * @return
      */
     void deleteByIds(List<Long> ids);
 
     /**
      * 修改菜品
      * @param dish
-     * @return
      */
     @AutoFill(value = OperationType.UPDATE)
     void update(Dish dish);
+
+    /**
+     * 动态查询菜品
+     * @param dish
+     * @return
+     */
+    List<Dish> list(Dish dish);
 }
